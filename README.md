@@ -104,4 +104,4 @@ export const SomePage = vue.defineComponent({
 
 The code is easier to read this way. As we can see ComponentProvidedByPlugin1 is imported from `@plugin1` statically.
 
-If code modularization is the goal, we do not need micro-frontend to enforce it, typescript is better for the job.
+If code modularization is the goal, we do not need micro-frontend to enforce it in runtime, typescript+vite can do a better job in compile time.
