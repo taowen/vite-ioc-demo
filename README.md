@@ -19,11 +19,11 @@ If we allow dependency between plugins, circular dependency tend to emerge
 
 # Inversion of Control
 
-It is easier to control dependency via Inversion of Control (IoC)
+It is easier to partition code via Inversion of Control (IoC)
 
 ![new-arch](./images/new-arch.drawio.svg)
 
-This fixs a lot of problems
+This dependency relationship fixes a lot of problems
 
 * if same page need to show components from plugin1 and plugin2, we assemble them in motherboard, checkout [example](./packages/demo-motherboard/src/SomePage.tsx)
 * although demo-motherboard can assemble the plugins, it does not have dependency of demo-plugin1 or demo-plugin2. Which means even if export some function in plugin1, motherboard can not use it. This avoids code bloat in demo-motherboard. It is unconvient to pull down logic into motherboard, [every spi neeed to be manually declared](./packages/demo-motherboard/ext/).
