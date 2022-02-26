@@ -8,7 +8,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "vue": "^3.2.25"
+    "vue": "^3.2.25",
+    "demo-motherboard": "workspace:*",
+    "demo-plugin1": "workspace:*"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.2.0",

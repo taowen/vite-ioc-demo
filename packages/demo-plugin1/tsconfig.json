@@ -12,5 +12,4 @@
     "lib": ["esnext", "dom"]
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "../demo-motherboard/ext/**/*.d.ts"],
-  "references": [{ "path": "./tsconfig.node.json" }]
 }
