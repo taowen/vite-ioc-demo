@@ -11,6 +11,15 @@ export default defineConfig({
         return 'demo-plugin1';
       }
     }
+  }, {
+    // we can inject different implementation, 
+    // as long as @plugin2 interface has been implemented
+    name: 'inject @plugin2',
+    resolveId(id) {
+      if (id === '@plugin2') {
+        return 'demo-plugin2';
+      }
+    }
   }],
   base: '',
 })

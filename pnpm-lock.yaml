@@ -7,6 +7,7 @@ importers:
       '@vitejs/plugin-vue': ^2.2.0
       demo-motherboard: workspace:*
       demo-plugin1: workspace:*
+      demo-plugin2: workspace:*
       typescript: ^4.5.4
       vite: ^2.8.0
       vue: ^3.2.25
@@ -14,6 +15,7 @@ importers:
     dependencies:
       demo-motherboard: link:../demo-motherboard
       demo-plugin1: link:../demo-plugin1
+      demo-plugin2: link:../demo-plugin2
       vue: 3.2.31
     devDependencies:
       '@vitejs/plugin-vue': 2.2.2_vite@2.8.4+vue@3.2.31
@@ -37,6 +39,17 @@ importers:
       vue-tsc: 0.29.8_typescript@4.5.5
 
   packages/demo-plugin1:
+    specifiers:
+      demo-motherboard: workspace:*
+      typescript: ^4.5.4
+      vue: ^3.2.25
+    dependencies:
+      demo-motherboard: link:../demo-motherboard
+      vue: 3.2.31
+    devDependencies:
+      typescript: 4.5.5
+
+  packages/demo-plugin2:
     specifiers:
       demo-motherboard: workspace:*
       typescript: ^4.5.4
