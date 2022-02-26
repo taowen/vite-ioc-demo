@@ -36,7 +36,7 @@ Inversion of Control is not new. It is a good old trick to enforce logic modular
 
 * pnpm: it brings monorepo, simplifies version management via [`workspace:*`](./packages/demo-app/package.json)
 * typescript: use [`declare module`](./packages/demo-motherboard/ext/plugin1.d.ts) to declare the spi, use [`tsconfig.json`](./packages/demo-plugin1/tsconfig.json) to import spi
-* vite: use `vite.config.ts` to link spi to specific implementation
+* vite: use [`vite.config.ts`](/packages/demo-app/vite.config.ts) to link spi to specific implementation
 
 Compared to IoC via runtime code composition:
 
@@ -82,4 +82,4 @@ export default defineConfig({
 })
 ```
 
-This is what is demo is all about.
+If code modularization is the goal, we do not need micro-frontend to enforce it, typescript is better for the job.
