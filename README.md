@@ -82,4 +82,25 @@ export default defineConfig({
 })
 ```
 
+How to assemble plugin is done in the [demo-motherboard](./packages/demo-motherboard/src/SomePage.tsx) instead
+
+```ts
+import { ComponentProvidedByPlugin1 } from '@plugin1';
+import { ComponentProvidedByPlugin2 } from '@plugin2';
+import * as vue from 'vue';
+
+export const SomePage = vue.defineComponent({
+    render() {
+        return <div>
+            ===
+            <ComponentProvidedByPlugin1 msg="hello" />
+            ===
+            <ComponentProvidedByPlugin2 position="blah" />
+        </div>
+    }
+})
+```
+
+The code is easier to read this way. As we can see ComponentProvidedByPlugin1 is imported from `@plugin1` statically.
+
 If code modularization is the goal, we do not need micro-frontend to enforce it, typescript is better for the job.
