@@ -26,7 +26,7 @@ It is easier to control dependency via Inversion of Control (IoC)
 This fixs a lot of problems
 
 * if same page need to show components from plugin1 and plugin2, we assemble them in motherboard, checkout [example](./packages/demo-motherboard/src/SomePage.tsx)
-* although demo-motherboard can assemble the plugins, it does not depend on concrete implementations. This avoids code bloat in demo-motherboard.
+* although demo-motherboard can assemble the plugins, it does not have dependency of demo-plugin1 or demo-plugin2. Which means even if export some function in plugin1, motherboard can not use it. This avoids code bloat in demo-motherboard. It is unconvient to pull down logic into motherboard, [every spi neeed to be manually declared](./packages/demo-motherboard/ext/).
 * if plugin2 need to call plugin1, we declare the spi in [motherboard](./packages/demo-motherboard/ext/plugin1.d.ts), then we can call it in [plugin2](./packages/demo-plugin2/src/ComponentProvidedByPlugin2.tsx)
 * as plugin2 does not depend on plugin1 directly, even if plugin1 [export function secretHiddenByPlugin1](./packages/demo-plugin1/src/ComponentProvidedByPlugin1.tsx), plugin2 can not access it, this ensures all spi must be defined in demo-motherboard
 * demo-app can be nearly empty project, even we can add static check to enforce this to encourage code modularization
