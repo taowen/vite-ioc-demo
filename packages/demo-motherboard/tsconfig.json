@@ -9,7 +9,12 @@
     "sourceMap": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "lib": ["esnext", "dom"]
+    "lib": ["esnext", "dom"],
+    "composite": true,
+    "paths": {
+      "@plugin1": ["./src/plugin1.ts"],
+      "@plugin2": ["./src/plugin2.ts"]
+    }
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "ext/**/*.d.ts", "ext/plugin1.ts"]
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "ext/**/*.d.ts"]
 }
