@@ -10,7 +10,7 @@
 
 ![old-arch](./images/old-arch.drawio.svg)
 
-然后把 demo-app 中的代码不断往 demo-plugin1 和 demo-plugin2 中的抽离。比如把一些不包含业务逻辑的纯视觉组件。
+然后把 demo-app 中的代码不断往 demo-plugin1 和 demo-plugin2 中的抽离。比如把一些不包含业务逻辑的纯视觉组件抽离。
 
 # 会遇到什么问题？
 
