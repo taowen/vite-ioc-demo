@@ -1,7 +1,7 @@
-# About
+# tldr;
 
 通过 vite 在代码构建阶段实现 Inversion of Control (IoC)。
-是一种虽然简单，但是非常强大的代码模块拆分方案。
+这是一种虽然简单，但是非常强大的代码模块拆分方案。
 
 # 模块拆分
 
@@ -294,4 +294,4 @@ export default defineConfig({
 
 这样做的好处就是无论加了多少个组件要组装的，这里的 vite.config.ts 都不需要再修改了。demo-app 的代码行数理论上来说可以是固定不变的，新的需求如果比较局部可以写在 demo-plugin1 或者 demo-plugin2 中，如果需要全局范围有逻辑关联，则还要改改 demo-motherboard。这样我们通过关注 demo-app 的修改和 demo-motherboard 的修改，就可以比较容易去发现代码组织上的潜在问题。
 
-如果只是为了强制代码的模块化，可以不需要上 micro-frontend 这样的重型方案，typescript+vite 就可以在代码构建期把这个事给办了。
+如果只是为了强制代码的模块化，完全不需要上 micro-frontend 这样的重型运行时方案，typescript+vite 在代码构建阶段就能把这个事给办了。
