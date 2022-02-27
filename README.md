@@ -69,7 +69,7 @@ import { ComponentProvidedByPlugin2 } from 'demo-plugin2';
 * 随着拆分得越来越多，demo-app 里需要不断地手写这样的模块装配代码。有没有办法可以减少 demo-app 的代码量，实现自动装配？
 * 回顾前面提出的三个问题，问题2就是 demo-app 的代码量不断膨胀，没有办法阻止往 demo-app 里写新的代码
 
-这里就介绍一种基于 vite 实现的在构建解决实现 Inversion of Control 的办法。
+这里就介绍一种基于 vite 实现的在构建阶段实现 Inversion of Control 的办法。
 
 # motherboard 声明抽象接口 @plugin1 和 @plugin2
 
