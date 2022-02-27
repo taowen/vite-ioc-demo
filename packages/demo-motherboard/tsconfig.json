@@ -12,8 +12,8 @@
     "lib": ["esnext", "dom"],
     "composite": true,
     "paths": {
-      "@plugin1": ["./src/plugin1.ts"],
-      "@plugin2": ["./src/plugin2.ts"]
+      "@plugin1": ["./src/plugin1.abstract.ts"],
+      "@plugin2": ["./src/plugin2.abstract.ts"]
     }
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "ext/**/*.d.ts"]
