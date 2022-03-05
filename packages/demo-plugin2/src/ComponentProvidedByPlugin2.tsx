@@ -2,8 +2,6 @@ import * as vue from 'vue';
 import * as plugin2 from '@plugin2';
 import * as plugin1 from '@plugin1';
 
-const React = { createElement: vue.h }
-
 // demo-motherboard does not depend on demo-plugin2
 // demo-plugin1 does not depend on demo-plugin2
 // even if we export this function, they can not import it
